@@ -1,7 +1,7 @@
 {
-    "version": "1.12.0",
-    "releaseTime": 1578093864915,
-    "releaseHeadline": "Improved bookmark management",
-    "releaseNotes": "https://minbrowser.github.io/min/releases/",
+    "version": "1.14.1",
+    "releaseTime": 1589583616947,
+    "releaseHeadline": "Bug fixes and 1Password integration",
+    "releaseNotes": "https://minbrowser.org/releases/",
     "availabilityPercent": 1
 }
