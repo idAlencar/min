@@ -12,7 +12,7 @@ const places = {
       const tab = tabs.get(tabId)
       if (tab) {
         const data = {
-          url: tab.url,
+          url: urlParser.getSourceURL(tab.url), // for PDF viewer and reader mode, save the original page URL and not the viewer URL
           title: tab.title,
           color: tab.backgroundColor,
           extractedText: extractedText
@@ -28,11 +28,11 @@ const places = {
       }
     }, 500)
   },
-  receiveHistoryData: function (webview, tabId, args) {
+  receiveHistoryData: function (tabId, args) {
     // called when js/preload/textExtractor.js returns the page's text content
 
-    var tab = tabs.get(tabId),
-      data = args[0]
+    var tab = tabs.get(tabId)
+    var data = args[0]
 
     if (tab.url.startsWith('data:') || tab.url.length > 5000) {
       /*
@@ -134,7 +134,11 @@ const places = {
           callback(false)
         })
       } else {
-        places.updateItem(url, {isBookmarked: true}, function () {
+        // if this page is open in a private tab, the title may not be saved already, so it needs to be included here
+        places.updateItem(url, {
+          isBookmarked: true,
+          title: tabs.get(tabId).title
+        }, function () {
           callback(true)
         })
       }

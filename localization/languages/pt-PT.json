@@ -136,11 +136,10 @@
         },
         "settingsAppearanceHeading": "Aparência",
         "settingsEnableDarkMode": "Ativar modo escuro:",
-        "settingsDarkModeNever": null, //"Never" missing translation
-        "settingsDarkModeNight": null, //"At night" missing translation
-        "settingsDarkModeAlways": null, //"Always" missing translation
+        "settingsDarkModeNever": "Nunca",
+        "settingsDarkModeNight": "De noite",
+        "settingsDarkModeAlways": "Sempre",
         "settingsSiteThemeToggle": "Ativar tema do site",
-        "settingsHistoryButtonToggle": "Mostrar botão para recuar",
         "settingsAdditionalFeaturesHeading": "Outras funcionalidades",
         "settingsUserscriptsToggle": "Ativar scripts de utilizador",
         "settingsSeparateTitlebarToggle": "Utilizar barra de título separada",
@@ -201,6 +200,16 @@
         "appMenuBringToFront": "Trazer tudo para a frente",
         /* PDF Viewer */
         "PDFPageCounter": {"unsafeHTML": "página <input type='text'/> de <span id='total'></span>"},
+ 	/* Context Reader */    
+	"buttonReaderSettings": "Definições do leitor",
+	"buttonReaderLightTheme": "Claro",
+	"buttonReaderSepiaTheme": "Sépia",
+	"buttonReaderDarkTheme": "Escuro",
+	"openReaderView": "Abrir sempre no modo de leitura",
+	"autoRedirectBannerReader": "Abrir todo os artigos deste site no modo de leitura?",
+	"buttonReaderRedirectYes": "Sim",
+	"buttonReaderRedirectNo": "Não",
+	"articleReaderView": "Artigo original",
         /* Download manager */
         "downloadCancel": "Cancelar",
         "downloadStateCompleted": "Terminada",

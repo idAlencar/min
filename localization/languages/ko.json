@@ -135,12 +135,11 @@
             "unsafeHTML": "이지리스트(EasyList)와 이지프라이버시(EasyPrivacy)를 기반으로 합니다. <a target=\"_blank\" href=\"https://easylist.to/\">EasyList</a> (<a target=\"_blank\" href=\"https://creativecommons.org/licenses/by-sa/3.0/legalcode\">이용 규약(라이선스) 보기</a>). "
         },
         "settingsAppearanceHeading": "외형",
-        "settingsEnableDarkMode": "어두운 외형 사용: ",
-        "settingsDarkModeNever": null, //"Never" missing translation
-        "settingsDarkModeNight": null, //"At night" missing translation
-        "settingsDarkModeAlways": null, //"Always" missing translation
+        "settingsEnableDarkMode": "어두운 외형(Dark Mode) 사용: ",
+        "settingsDarkModeNever": "사용하지 않음",
+        "settingsDarkModeNight": "밤에만 사용",
+        "settingsDarkModeAlways": "항상 사용",
         "settingsSiteThemeToggle": "누리집 색상 주제 사용",
-        "settingsHistoryButtonToggle": "뒤로 버튼 사용",
         "settingsAdditionalFeaturesHeading": "추가 기능",
         "settingsUserscriptsToggle": "사용자 명령(스크립트) 사용",
         "settingsSeparateTitlebarToggle": "제목 표시줄과 도구 표시줄 사용",
@@ -201,6 +200,16 @@
         "appMenuBringToFront": "맨 앞으로",
         /* PDF Viewer */
         "PDFPageCounter": {"unsafeHTML": "전체 <span id='total'></span> 쪽 중 <input type='text'/> 쪽"},
+ 	/* Context Reader */    
+	"buttonReaderSettings": "읽기 지원 설정",
+	"buttonReaderLightTheme": "밝게",
+	"buttonReaderSepiaTheme": "흑갈색",
+	"buttonReaderDarkTheme": "어둡게",
+	"openReaderView": "항상 읽기 지원으로 열기",
+	"autoRedirectBannerReader": "이 누리집의 문서를 항상 읽기 지원으로 여시겠습니까?",
+	"buttonReaderRedirectYes": "네",
+	"buttonReaderRedirectNo": "아니오",
+	"articleReaderView": "원본 문서",
         /* Download manager */
         "downloadCancel": "취소",
         "downloadStateCompleted": "완료됨",

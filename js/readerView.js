@@ -116,7 +116,8 @@ var readerView = {
           fakeFocus: filterText && idx === 0,
           delete: function (el) {
             db.readingList.where('url').equals(article.url).delete()
-          }
+          },
+          showDeleteButton: true
         }
 
         if (article.visitCount > 5 || (article.extraData.scrollPosition > 0 && article.extraData.articleScrollLength - article.extraData.scrollPosition < 1000)) { // the article has been visited frequently, or the scroll position is at the bottom
@@ -146,7 +147,7 @@ var readerView = {
 
     // update the reader button on page load
 
-    webviews.bindEvent('did-start-navigation', function (webview, tabId, url, isInPlace, isMainFrame, frameProcessId, frameRoutingId) {
+    webviews.bindEvent('did-start-navigation', function (tabId, url, isInPlace, isMainFrame, frameProcessId, frameRoutingId) {
       if (isInPlace) {
         return
       }
@@ -162,7 +163,7 @@ var readerView = {
       }
     })
 
-    webviews.bindIPC('canReader', function (webview, tab) {
+    webviews.bindIPC('canReader', function (tab) {
       if (readerDecision.shouldRedirect(tabs.get(tab).url) >= 0) {
         // if automatic reader mode has been enabled for this domain, and the page is readerable, enter reader mode
         readerView.enter(tab)

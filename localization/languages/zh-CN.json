@@ -140,7 +140,6 @@
         "settingsDarkModeNight": null, //"At night" missing translation
         "settingsDarkModeAlways": null, //"Always" missing translation
         "settingsSiteThemeToggle": "启用网站主题",
-        "settingsHistoryButtonToggle": "启用返回键",
         "settingsAdditionalFeaturesHeading": "其他功能",
         "settingsUserscriptsToggle": "允许使用者指令",
         "settingsSeparateTitlebarToggle": null, //missing translation
@@ -201,6 +200,16 @@
         "appMenuBringToFront": "前置所有窗口",
         /* PDF Viewer */
         "PDFPageCounter": {"unsafeHTML": "<input type='text'/> / <span id='total'></span> 页"},
+ 	/* Context Reader */    
+	"buttonReaderSettings": null, //missing translation "Reader Settings"
+	"buttonReaderLightTheme": null, //missing translation "Light"
+	"buttonReaderSepiaTheme": null, //missing translation "Sepia"
+	"buttonReaderDarkTheme": null, //missing translation "Dark"
+	"openReaderView": null, //missing translation "Always open in reader view"
+	"autoRedirectBannerReader": null, //missing translation "Always open articles from this site in reader view?"
+	"buttonReaderRedirectYes": null, //missing translation "Yes"
+	"buttonReaderRedirectNo": null, //missing translation "No"
+	"articleReaderView": null, //missing translation "Original Article"
         /* Download manager */
         "downloadCancel": "取消",
         "downloadStateCompleted": "已完成",

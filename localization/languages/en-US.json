@@ -140,7 +140,6 @@
         "settingsDarkModeNight": "At night",
         "settingsDarkModeAlways": "Always",
         "settingsSiteThemeToggle": "Enable site theme",
-        "settingsHistoryButtonToggle": "Enable back button",
         "settingsAdditionalFeaturesHeading": "Additional Features",
         "settingsUserscriptsToggle": "Enable user scripts",
         "settingsSeparateTitlebarToggle": "Use separate title bar",
@@ -201,6 +200,16 @@
         "appMenuBringToFront": "Bring All to Front",
         /* PDF Viewer */
         "PDFPageCounter": {"unsafeHTML": "page <input type='text'/> of <span id='total'></span>"},
+	/* Context Reader */    
+	"buttonReaderSettings": "Reader Settings",
+	"buttonReaderLightTheme": "Light",
+	"buttonReaderSepiaTheme": "Sepia",
+	"buttonReaderDarkTheme": "Dark",
+	"openReaderView": "Always open in reader view",
+	"autoRedirectBannerReader": "Always open articles from this site in reader view?",
+	"buttonReaderRedirectYes": "Yes",
+	"buttonReaderRedirectNo": "No",
+	"articleReaderView": "Original Article",
         /* Download manager */
         "downloadCancel": "Cancel",
         "downloadStateCompleted": "Completed",

@@ -16,7 +16,7 @@ bangsPlugin.registerCustomBang({
   snippet: l('viewSettings'),
   isAction: true,
   fn: function (text) {
-    browserUI.navigate(tabs.getSelected(), 'file://' + __dirname + '/pages/settings/index.html')
+    webviews.update(tabs.getSelected(), 'file://' + __dirname + '/pages/settings/index.html')
   }
 })
 
@@ -25,9 +25,7 @@ bangsPlugin.registerCustomBang({
   snippet: l('goBack'),
   isAction: true,
   fn: function (text) {
-    try {
-      webviews.get(tabs.getSelected()).goBack()
-    } catch (e) {}
+    webviews.callAsync(tabs.getSelected(), 'goBack')
   }
 })
 
@@ -36,9 +34,7 @@ bangsPlugin.registerCustomBang({
   snippet: l('goForward'),
   isAction: true,
   fn: function (text) {
-    try {
-      webviews.get(tabs.getSelected()).goForward()
-    } catch (e) {}
+    webviews.callAsync(tabs.getSelected(), 'goForward')
   }
 })
 
