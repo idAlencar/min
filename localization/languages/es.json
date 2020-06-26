@@ -28,7 +28,6 @@
         "suggestedSite": "Sitio sugerido", //this is used to label suggested websites from the DuckDuckGo API,
         "resultsFromDDG": "Resultados de DuckDuckGo", //this is used as a label to indicate which results come from DuckDuckGo's API
         "taskN": "Tarea %n", //this is used as a way to identify which tab a task is in "task 1", "task 2", ...
-        "hostsFileEntry": "Entrada del fichero hosts", //this is a label used to indicate that a result is coming from the user's host file
         /* custom !bangs
         these are some of the items that show up when you press ! in the searchbar.
         Each one of these strings describes what the command will do when you run it. */
@@ -52,6 +51,7 @@
 		"searchHistory": null, //missing translation
         "importBookmarks": null, //missing translation
 		"exportBookmarks": null, //missing translation
+        "runUserscript": null, //missing translation
         /* navbar */
         "openMenu": null, //missing translation
         "enterReaderView": "Entrar en la vista de lectura",
@@ -78,8 +78,8 @@
         /* Focus mode */
         "isFocusMode": "Estás en el modo de enfoque.",
         "closeDialog": "Aceptar", //used as a label for the button that closes the dialog
-        "focusModeExplanation1": "En el modo de enfoque, todas las pestañas excepto la actual están ocultas, y no puedes crear nuevas pestañas.",
-        "focusModeExplanation2": "Pues salir del modo de enfoque desmarcando \"Modo de enfoque\" en el menú Ver.",
+        "focusModeExplanation1": null, //missing translation "In focus mode, you can't create new tabs or switch tasks."
+        "focusModeExplanation2": null, //missing translation "You can leave focus mode by unchecking \"focus mode\" in the view menu."
         /* relative dates */
         "timeRangeJustNow": null, //missing translation
         "timeRangeMinutes": null, //missing translation
@@ -143,6 +143,7 @@
         "settingsAdditionalFeaturesHeading": null, //missing translation
         "settingsUserscriptsToggle": null, //missing translation
         "settingsSeparateTitlebarToggle": null, //missing translation
+		"settingsOpenTabsInForegroundToggle": null, //missing translation
 		"settingsUserscriptsExplanation": null, //missing translation
         "settingsUserAgentToggle": null, //missing translation
         "settingsUpdateNotificationsToggle": null, //missing translation

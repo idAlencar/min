@@ -28,7 +28,6 @@
         "suggestedSite": "建议站点", //this is used to label suggested websites from the DuckDuckGo API,
         "resultsFromDDG": "DuckDuckGo 返回的结果", //this is used as a label to indicate which results come from DuckDuckGo's API
         "taskN": "标签组 %n", //this is used as a way to identify which tab a task is in "task 1", "task 2", ...
-        "hostsFileEntry": "宿主机文件", //this is a label used to indicate that a result is coming from the user's host file
         /* custom !bangs
         these are some of the items that show up when you press ! in the searchbar.
         Each one of these strings describes what the command will do when you run it. */
@@ -52,6 +51,7 @@
 		"searchHistory": "搜索历史",
         "importBookmarks": "自HTML文件导入书签",
 		"exportBookmarks": "导出书签",
+        "runUserscript": null, //missing translation
         /* navbar */
         "openMenu": "开启菜单",
         "enterReaderView": "进入阅读模式",
@@ -78,8 +78,8 @@
         /* Focus mode */
         "isFocusMode": "当前处于焦点模式",
         "closeDialog": "确定", //used as a label for the button that closes the dialog
-        "focusModeExplanation1": "在焦点模式中，隐藏除当前标签页之外的其它所有标签页，且不能新建标签页。",
-        "focusModeExplanation2": "您可以通过菜单\"视图->焦点模式\"退出焦点模式。",
+        "focusModeExplanation1": null, //missing translation "In focus mode, you can't create new tabs or switch tasks."
+        "focusModeExplanation2": null, //missing translation "You can leave focus mode by unchecking \"focus mode\" in the view menu."
         /* relative dates */
         "timeRangeJustNow": "几秒前",
         "timeRangeMinutes": "几分钟前",
@@ -143,6 +143,7 @@
         "settingsAdditionalFeaturesHeading": "其他功能",
         "settingsUserscriptsToggle": "允许使用者指令",
         "settingsSeparateTitlebarToggle": null, //missing translation
+		"settingsOpenTabsInForegroundToggle": null, //missing translation
 		"settingsUserscriptsExplanation": {"unsafeHTML": "使用者指令允许您改变网站行为 - <a href=\"https://github.com/minbrowser/min/wiki/userscripts\">查看更多</a>."},
         "settingsUserAgentToggle": null, //missing translation
         "settingsUpdateNotificationsToggle": "自动检查更新",

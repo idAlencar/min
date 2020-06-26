@@ -28,7 +28,6 @@
         "suggestedSite": "Suggested site", //this is used to label suggested websites from the DuckDuckGo API,
         "resultsFromDDG": "Results from DuckDuckGo", //this is used as a label to indicate which results come from DuckDuckGo's API
         "taskN": "Task %n", //this is used as a way to identify which tab a task is in "task 1", "task 2", ...
-        "hostsFileEntry": "Hosts file entry", //this is a label used to indicate that a result is coming from the user's host file
         /* custom !bangs
         these are some of the items that show up when you press ! in the searchbar.
         Each one of these strings describes what the command will do when you run it. */
@@ -52,6 +51,7 @@
 		"searchHistory": "Search history",
         "importBookmarks": "Import bookmarks from HTML file",
 		"exportBookmarks": "Export bookmarks",
+        "runUserscript": "Run userscript",
         /* navbar */
         "openMenu": "Open menu", //application menu button on windows
         "enterReaderView": "Enter reader view",
@@ -78,7 +78,7 @@
         /* Focus mode */
         "isFocusMode": "You're in Focus Mode.",
         "closeDialog": "OK", //used as a label for the button that closes the dialog
-        "focusModeExplanation1": "In focus mode, all tabs except the current one are hidden, and you can't create new tabs.",
+        "focusModeExplanation1": "In focus mode, you can't create new tabs or switch tasks.",
         "focusModeExplanation2": "You can leave focus mode by unchecking \"focus mode\" in the view menu.",
         /* relative dates */
         "timeRangeJustNow": "Just now",
@@ -143,6 +143,7 @@
         "settingsAdditionalFeaturesHeading": "Additional Features",
         "settingsUserscriptsToggle": "Enable user scripts",
         "settingsSeparateTitlebarToggle": "Use separate title bar",
+        "settingsOpenTabsInForegroundToggle": "Open new tabs in the foreground",
 		"settingsUserscriptsExplanation": {"unsafeHTML": "User scripts allow you to modify the behavior of websites - <a href=\"https://github.com/minbrowser/min/wiki/userscripts\">learn more</a>."},
         "settingsUserAgentToggle": "Use a custom user agent",
         "settingsUpdateNotificationsToggle": "Automatically check for updates",
@@ -245,6 +246,6 @@
         "username": "Username",
         "email": "Email",
         "password": "Password",
-        "secretKey": "Secret key" //missing translation
+        "secretKey": "Secret key"
     }
 }

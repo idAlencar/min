@@ -28,7 +28,6 @@
 		"suggestedSite": "Taklif qilingan sahifa", //this is used to label suggested websites from the DuckDuckGo API,
 		"resultsFromDDG": "DuckDuckGo dan javoblar", //this is used as a label to indicate which results come from DuckDuckGo's API
 		"taskN": "Vazifa %n", //this is used as a way to identify which tab a task is in "task 1", "task 2", ...
-		"hostsFileEntry": "Xostdan fayl kiritishlar", //this is a label used to indicate that a result is coming from the user's host file
 		/* custom !bangs
         these are some of the items that show up when you press ! in the searchbar.
         Each one of these strings describes what the command will do when you run it. */
@@ -52,7 +51,8 @@
 		"searchHistory": "Tarixdan qidirish",
 		"importBookmarks": "Xatcho'plarni HTML fayldan import qilish",
 		"exportBookmarks": "Xatcho'plarni export qilish",
-		/* navbar */
+		"runUserscript": null, //missing translation
+        /* navbar */
 		"openMenu": "Menyuni ochish", //application menu button on windows
 		"enterReaderView": "O'quvchi ko'rinishiga kirish",
 		"exitReaderView": "O'quvchi ko'rinishidan chiqish",
@@ -80,8 +80,8 @@
 		/* Focus mode */
 		"isFocusMode": "Siz Fokus Rejimidasiz",
 		"closeDialog": "OK", //used as a label for the button that closes the dialog
-		"focusModeExplanation1": "Fokus Rejimida, barcha varaqlar bunisidan tashqari, yashirib qo'yilgan va yangi varaqlar yarata olmaysiz.",
-		"focusModeExplanation2": "Siz Fokus Rejimidan ko'rinish menyusidagi \"focus mode\" dan belgini olib tashlab chiqib ketishingiz mumkin.",
+		"focusModeExplanation1": null, //missing translation "In focus mode, you can't create new tabs or switch tasks."
+		"focusModeExplanation2": null, //missing translation "You can leave focus mode by unchecking \"focus mode\" in the view menu."
 		/* relative dates */
 		"timeRangeJustNow": "Hozirgina",
 		"timeRangeMinutes": "Bir necha daqiqa oldin",
@@ -145,6 +145,7 @@
 		"settingsAdditionalFeaturesHeading": "Qo'shimcha xususiyatlar",
 		"settingsUserscriptsToggle": "Foydalanuvchi skriptlarini yoqish",
 		"settingsSeparateTitlebarToggle": "Alohida sarlavha paneli ishlatish",
+		"settingsOpenTabsInForegroundToggle": null, //missing translation
 		"settingsUserscriptsExplanation": {
 			"unsafeHTML": "Foydalanuvchi skriptlari sahifa ishlashini o'zgartirishga yordam beradi - <a href=\"https://github.com/minbrowser/min/wiki/userscripts\">qo'shimcha ma'lumot</a>."
 		},

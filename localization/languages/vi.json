@@ -28,7 +28,6 @@
         "suggestedSite": "Trang web đề xuất", //this is used to label suggested websites from the DuckDuckGo API,
         "resultsFromDDG": "Kết quả từ DuckDuckGo", //this is used as a label to indicate which results come from DuckDuckGo's API
         "taskN": "Quá trình %n", //this is used as a way to identify which tab a task is in "task 1", "task 2", ...
-        "hostsFileEntry": "Dòng trong tệp Hosts", //this is a label used to indicate that a result is coming from the user's host file
         /* custom !bangs
         these are some of the items that show up when you press ! in the searchbar.
         Each one of these strings describes what the command will do when you run it. */
@@ -52,6 +51,7 @@
 		"searchHistory": "Tìm kiếm trong lịch sử",
         "importBookmarks": "Nhập dấu trang từ tệp HTML",
 		"exportBookmarks": "Xuất dấu trang",
+        "runUserscript": null, //missing translation
         /* navbar */
         "openMenu": "Mở menu", //application menu button on windows
         "enterReaderView": "Vào chế độ đọc ngôn",
@@ -74,8 +74,8 @@
         /* Focus mode */
         "isFocusMode": "Bạn trong chế độ tập trung.",
         "closeDialog": "OK", //used as a label for the button that closes the dialog
-        "focusModeExplanation1": "Trong chế độ tập trung, các tab trừ tab hiện tại sẽ bị ẩn, và bạn không có thể mở tab mới.",
-        "focusModeExplanation2": "Bạn có thể thoát chế độ tập trung bởi cách bỏ chọn \"Chế độ tập trung\" trong menu Xem.",
+        "focusModeExplanation1": null, //missing translation "In focus mode, you can't create new tabs or switch tasks."
+        "focusModeExplanation2": null, //missing translation "You can leave focus mode by unchecking \"focus mode\" in the view menu."
         /* relative dates */
         "timeRangeJustNow": "Vừa nãy",
         "timeRangeMinutes": "Vài phút trước",
@@ -139,6 +139,7 @@
         "settingsAdditionalFeaturesHeading": "Đặc tính hơn",
         "settingsUserscriptsToggle": "Bật mã script người dùng",
         "settingsSeparateTitlebarToggle": null, //missing translation
+		"settingsOpenTabsInForegroundToggle": null, //missing translation
 		"settingsUserscriptsExplanation": {"unsafeHTML": "Mã script người dùng có thể cho bạn thay đổi hành vi trang web - <a href=\"https://github.com/minbrowser/min/wiki/userscripts\">biết thêm</a>."},
         "settingsUserAgentToggle": null, //missing translation
         "settingsUpdateNotificationsToggle": "Tự động kiểm tra cập nhật",

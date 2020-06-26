@@ -480,9 +480,15 @@ webviews.bindEvent('crashed', function (tabId, isKilled) {
 })
 
 webviews.bindIPC('getSettingsData', function (tabId, args) {
+  if (!urlParser.isInternalURL(tabs.get(tabId).url)) {
+    throw new Error()
+  }
   webviews.callAsync(tabId, 'send', ['receiveSettingsData', settings.list])
 })
 webviews.bindIPC('setSetting', function (tabId, args) {
+  if (!urlParser.isInternalURL(tabs.get(tabId).url)) {
+    throw new Error()
+  }
   settings.set(args[0].key, args[0].value)
 })
 
@@ -542,7 +548,7 @@ ipc.on('captureData', function (e, data) {
 /* focus the view when the window is focused */
 
 ipc.on('windowFocus', function () {
-  if (document.activeElement === document.body) {
+  if (webviews.placeholderRequests.length === 0 && document.activeElement.tagName !== 'INPUT') {
     webviews.focus()
   }
 })

@@ -28,7 +28,6 @@
         "suggestedSite": "Sito suggerito", //this is used to label suggested websites from the DuckDuckGo API,
         "resultsFromDDG": "Risultati di DuckDuckGo", //this is used as a label to indicate which results come from DuckDuckGo's API
         "taskN": "Task %n", //this is used as a way to identify which tab a task is in "task 1", "task 2", ...
-        "hostsFileEntry": "Elemento file hosts", //this is a label used to indicate that a result is coming from the user's host file
         /* custom !bangs
         these are some of the items that show up when you press ! in the searchbar.
         Each one of these strings describes what the command will do when you run it. */
@@ -52,6 +51,7 @@
 		"searchHistory": "Cerca nella cronologia",
         "importBookmarks": null, //missing translation
 		"exportBookmarks": "Esporta Preferiti",
+        "runUserscript": null, //missing translation
         /* navbar */
         "openMenu": "Apri menu", //application menu button on windows
         "enterReaderView": "Entra in Modalità Lettura",
@@ -78,8 +78,8 @@
         /* Focus mode */
         "isFocusMode": "Sei in Modalità Focus.",
         "closeDialog": "OK", //used as a label for the button that closes the dialog
-        "focusModeExplanation1": "In Modalità Focus, tutte le schede eccetto quella corrente vengono nascoste, e non puoi crearne di nuove.",
-        "focusModeExplanation2": "Puoi uscire dalla Modalità Focus deselezionando \"Modalità Focus\" nel menù Vista.",
+        "focusModeExplanation1": null, //missing translation "In focus mode, you can't create new tabs or switch tasks."
+        "focusModeExplanation2": null, //missing translation "You can leave focus mode by unchecking \"focus mode\" in the view menu."
         /* relative dates */
         "timeRangeJustNow": "Proprio ora",
         "timeRangeMinutes": "Pochi minuti fa",
@@ -143,6 +143,7 @@
         "settingsAdditionalFeaturesHeading": "Funzionalità aggiuntive",
         "settingsUserscriptsToggle": "Abilita script definiti dall'utente",
         "settingsSeparateTitlebarToggle": null, //missing translation
+		"settingsOpenTabsInForegroundToggle": null, //missing translation
 		"settingsUserscriptsExplanation": {"unsafeHTML": "Gli script definiti dall'utente ti permettono di modificare il comportamento dei siti - <a href=\"https://github.com/minbrowser/min/wiki/userscripts\">scopri di più</a>."},
         "settingsUserAgentToggle": null, //missing translation
         "settingsUpdateNotificationsToggle": "Controlla automaticamente la presenza di aggiornamenti", 

@@ -5,6 +5,7 @@ var banner = document.getElementById('restart-required-banner')
 var siteThemeCheckbox = document.getElementById('checkbox-site-theme')
 var userscriptsCheckbox = document.getElementById('checkbox-userscripts')
 var separateTitlebarCheckbox = document.getElementById('checkbox-separate-titlebar')
+var openTabsInForegroundCheckbox = document.getElementById('checkbox-open-tabs-in-foreground')
 var userAgentCheckbox = document.getElementById('checkbox-user-agent')
 var userAgentInput = document.getElementById('input-user-agent')
 
@@ -199,7 +200,6 @@ settings.get('userscriptsEnabled', function (value) {
 
 userscriptsCheckbox.addEventListener('change', function (e) {
   settings.set('userscriptsEnabled', this.checked)
-  showRestartRequiredBanner()
 })
 
 /* separate titlebar setting */
@@ -218,6 +218,19 @@ separateTitlebarCheckbox.addEventListener('change', function (e) {
   settings.set('useSeparateTitlebar', this.checked)
   showRestartRequiredBanner()
 })
+
+/* tabs in foreground setting */
+
+settings.get('openTabsInForeground', function (value) {
+  if (value === true) {
+    openTabsInForegroundCheckbox.checked = true
+  }
+})
+
+openTabsInForegroundCheckbox.addEventListener('change', function (e) {
+  settings.set('openTabsInForeground', this.checked)
+})
+
 
 /* user agent settting */
 
