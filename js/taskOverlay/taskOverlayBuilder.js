@@ -82,11 +82,13 @@ var TaskOverlayBuilder = {
       nameInputField: function (task, taskIndex) {
         var input = document.createElement('input')
         input.classList.add('task-name')
+        input.classList.add('mousetrap')
 
         var taskName = l('defaultTaskName').replace('%n', taskIndex + 1)
 
         input.placeholder = taskName
         input.value = task.name || taskName
+        input.spellcheck = false
 
         input.addEventListener('keyup', function (e) {
           if (e.keyCode === 13) {
@@ -108,6 +110,7 @@ var TaskOverlayBuilder = {
       deleteButton: function (container, task) {
         var deleteButton = document.createElement('button')
         deleteButton.className = 'fa fa-trash-o task-delete-button'
+        deleteButton.tabIndex = -1 // needed for keyboardNavigationHelper
 
         deleteButton.addEventListener('click', function (e) {
           if (task.tabs.isEmpty()) {
@@ -284,15 +287,7 @@ var TaskOverlayBuilder = {
 
         var el = searchbarUtils.createItem(data)
 
-        el.tabIndex = 0
         el.setAttribute('data-tab', tab.id)
-
-        // return or space should act like click
-        el.addEventListener('keydown', function (e) {
-          if (e.keyCode === 13 || e.keyCode === 32) {
-            el.click()
-          }
-        })
 
         el.addEventListener('click', function (e) {
           browserUI.switchToTask(this.parentNode.getAttribute('data-task'))

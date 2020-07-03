@@ -99,7 +99,7 @@ function handleCommandLineArguments (argv) {
           sendIPCToWindow(mainWindow, 'addTab', {
             url: arg
           })
-        } else if (arg.includes(' ') || (idx > 0 && argv[idx - 1] === '-s')) {
+        } else if (idx > 0 && argv[idx - 1] === '-s') {
           //search
           sendIPCToWindow(mainWindow, 'addTab', {
             url: arg
@@ -231,6 +231,8 @@ function createWindowWithBounds (bounds) {
 
   mainWindow.on('leave-full-screen', function () {
     sendIPCToWindow(mainWindow, 'leave-full-screen')
+    // https://github.com/minbrowser/min/issues/1093
+    mainWindow.setMenuBarVisibility(false)
   })
 
   mainWindow.on('enter-html-full-screen', function () {
