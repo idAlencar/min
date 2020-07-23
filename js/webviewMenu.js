@@ -27,9 +27,42 @@ const webviewMenu = {
       ])
     }
 
+    /* Spellcheck */
+
+    if (data.misspelledWord) {
+      var suggestionEntries = data.dictionarySuggestions.slice(0, 3).map(function (suggestion) {
+        return {
+          label: suggestion,
+          click: function () {
+            webviews.callAsync(tabs.getSelected(), 'replaceMisspelling', suggestion)
+          }
+        }
+      })
+
+      // https://www.electronjs.org/docs/api/session#sesaddwordtospellcheckerdictionaryword
+      // "This API will not work on non-persistent (in-memory) sessions"
+      if (!currentTab.private) {
+        suggestionEntries.push({
+          label: l('addToDictionary'),
+          click: function () {
+            remote.session.defaultSession.addWordToSpellCheckerDictionary(data.misspelledWord)
+          }
+        })
+      }
+
+      if (suggestionEntries.length > 0) {
+        menuSections.push(suggestionEntries)
+      }
+    }
+
     /* links */
 
-    var link = data.linkURL || data.frameURL
+    var link = data.linkURL
+
+    // show link items for embedded frames, but not the top-level page (which will also be listed as a frameURL)
+    if (!link && data.frameURL && data.frameURL !== currentTab.url) {
+      link = data.frameURL
+    }
 
     if (link === 'about:srcdoc') {
       /* srcdoc is used in reader view, but it can't actually be opened anywhere outside of the reader page */
@@ -59,6 +92,13 @@ const webviewMenu = {
         label: l('openInNewPrivateTab'),
         click: function () {
           browserUI.addTab(tabs.add({ url: link, private: true }), { enterEditMode: false })
+        }
+      })
+
+      linkActions.push({
+        label: l('saveLinkAs'),
+        click: function () {
+          remote.getCurrentWebContents().downloadURL(link)
         }
       })
 
@@ -161,12 +201,24 @@ const webviewMenu = {
     }
 
     if (link || (mediaURL && !mediaURL.startsWith('blob:'))) {
-      clipboardActions.push({
-        label: l('copyLink'),
-        click: function () {
-          clipboard.writeText(link || mediaURL)
+      if (link.startsWith('mailto:')) {
+        var ematch = link.match(/(?<=mailto:)[^\?]+/)
+        if (ematch) {
+          clipboardActions.push({
+            label: l('copyEmailAddress'),
+            click: function () {
+                clipboard.writeText(ematch[0])
+            }
+          })
         }
-      })
+      } else {
+        clipboardActions.push({
+          label: l('copyLink'),
+          click: function () {
+            clipboard.writeText(link || mediaURL)
+          }
+        })
+      }
     }
 
     if (clipboardActions.length !== 0) {
